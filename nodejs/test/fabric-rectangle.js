@@ -1,5 +1,5 @@
-let fabric = require('fabric/node');
-var assert = require('assert');
+const fabric = require('fabric/node');
+const assert = require('assert');
 
 describe('Fabric', function() {
     describe('#drawRectangle', function() {

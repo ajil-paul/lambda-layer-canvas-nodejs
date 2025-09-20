@@ -1,5 +1,6 @@
-let Konva = require('konva');
-var assert = require('assert');
+const Konva = require('konva');
+import 'konva/canvas-backend';
+const assert = require('assert');
 const semver = require('semver');
 
 describe('Konva', function () {

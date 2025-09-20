@@ -14,7 +14,7 @@ set -e
 
 LAYER_NAME=canvas-nodejs
 LAYER_DESCRIPTION="Cairo backed Mozilla Web Canvas API implementation layer for AWS Lambda"
-LAYER_VERSION=3.1.2
+LAYER_VERSION=3.2.0
 LAYER_AUTHOR="Charoite Lee"
 
 DOT_CHAR="."
@@ -55,4 +55,4 @@ mkdir node${NODE_VERSION%%$DOT_CHAR*}
 mv node_modules node${NODE_VERSION%%$DOT_CHAR*}
 cd ..
 find nodejs/node${NODE_VERSION%%$DOT_CHAR*} -type f -name '*.node' 2>/dev/null | grep -v 'obj\.target' | xargs ldd | awk 'NF == 4 { system("cp " $3 " lib") }'
-zip -q -r canvas-nodejs_v$LAYER_VERSION-node${NODE_VERSION%%$DOT_CHAR*}.zip . -x LICENSE README.md .git/**\* .github/**\* .gitignore nodejs/test/**\* *.yml build-layer.sh
+zip -q -r canvas-nodejs_v$LAYER_VERSION-node${NODE_VERSION%%$DOT_CHAR*}.zip . -x LICENSE README.md .git/**\* .github/**\* .gitignore nodejs/test/**\* *.yml docs/**\* .devcontainer/**\* build-layer.sh

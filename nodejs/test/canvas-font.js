@@ -1,5 +1,5 @@
-let { registerFont, createCanvas } = require('canvas');
-var assert = require('assert');
+const { registerFont, createCanvas } = require('canvas');
+const assert = require('assert');
 
 describe('Font', function() {
   describe('#registerFont', function() {

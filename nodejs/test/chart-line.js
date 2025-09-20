@@ -1,6 +1,6 @@
-let { registerFont, createCanvas } = require('canvas');
-let { CategoryScale, Chart, LinearScale, LineController, LineElement, PointElement } = require('chart.js');
-var assert = require('assert');
+const { registerFont, createCanvas } = require('canvas');
+const { CategoryScale, Chart, LinearScale, LineController, LineElement, PointElement } = require('chart.js');
+const assert = require('assert');
 
 describe('Chart', function () {
     describe('#drawLineGraph', function () {
