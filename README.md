@@ -32,10 +32,10 @@ Since AWS Lambda is a secure and isolated runtime and execution environment, the
 
 [Fabric.js](https://github.com/fabricjs/fabric.js) provides a missing and interactive object model for canvas, as well as an SVG parser, layer of interactivity, and a whole suite of other indispensable tools.
 
-> Current supported version fabric@6.7.0
+> Current supported version fabric@6.7.1
 
 ### Konva support
 
 [Konva](https://github.com/konvajs/konva) enables high performance animations, transitions, node nesting, layering, filtering, caching, event handling for desktop and mobile applications, and much more.
 
-> Current supported version konva@9.3.22
+> Current supported version konva@10.0.2
