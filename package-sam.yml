@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion : '2010-09-09'
+AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Resources:
     NodeCanvasLayer:
@@ -11,8 +11,24 @@ Resources:
                 - nodejs<NODEJS_RUNTIME_VERSION>
             RetentionPolicy: Retain
             LicenseInfo: MIT
-          
+
 Outputs:
     LayerVersion:
         Description: Layer ARN Reference
         Value: !Ref NodeCanvasLayer
+Metadata:
+    AWS::ServerlessRepo::Application:
+        Name: my-custom-canvas-layer
+        Description: Custom Lambda Layer with Canvas + PDFKit + SVG-to-PDF (modified from charoitel/lambda-layer-canvas-nodejs)
+        Author: Ajil
+        SpdxLicenseId: MIT
+        LicenseUrl: https://raw.githubusercontent.com/ajil-paul/lambda-layer-canvas-nodejs/main/LICENSE
+        ReadmeUrl: https://raw.githubusercontent.com/ajil-paul/lambda-layer-canvas-nodejs/main/README.md
+        Labels:
+            - lambda
+            - layer
+            - canvas
+            - pdfkit
+            - fabricjs
+        HomePageUrl: https://github.com/ajil-paul/lambda-layer-canvas-nodejs
+        SourceCodeUrl: https://github.com/ajil-paul/lambda-layer-canvas-nodejs
